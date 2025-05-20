@@ -1,12 +1,20 @@
+"""
+    Arquivo que contem o codificador e o Decodificador.
+    Importar esse arquivo para poder usar a cifra de Vigenere.
+    Nele é possivel escolher entre usar a operação XOR (padrão) ou a adição
+    para criptografar e descriptografar o arquivo. Lembre de manter 
+    esse parametro igual para o criptografia e a descriptografia.
+"""
+
+
+
 class Vigenere():
 
-    def __init__(self, bitwise=True, xor_or_add="xor"):
+    def __init__(self, xor_or_add="xor"):
         """
         Initializes the Vigenere cipher with options for bitwise operations and XOR or addition.
-        :param bitwise: If True, treats the data as bytes; if False, treats it as letters.
-        :param xor_or_add: If True, uses XOR for encryption; if False, uses addition.
+        :param xor_or_add: If "xor", uses XOR for encryption; if not "xor", uses addition.
         """
-        self.bitwise = bitwise 
         self.xor = (xor_or_add == "xor")
 
     
@@ -24,20 +32,16 @@ class Vigenere():
             # key = key * (len(data) // len(key)) + key[:len(data) % len(key)]
         
         # Encrypt the data
-        if self.bitwise:
-            data = bytearray(data)
-            key = bytearray(key)
-            for i in range(len(data)):
-                # XOR operation
-                if self.xor:
-                    data[i] = (data[i] ^ key[i%key_size])
+        data = bytearray(data)
+        key = bytearray(key)
+        for i in range(len(data)):
+            # XOR operation
+            if self.xor:
+                data[i] = (data[i] ^ key[i%key_size])
                     
-                # Addition operation
-                else:
-                    data[i] = (data[i] + key[i%key_size]) % 256
-
-        else:
-            pass
+            # Addition operation
+            else:
+                data[i] = (data[i] + key[i%key_size]) % 256
 
 
         arq = arq_text.split(".")
@@ -59,21 +63,19 @@ class Vigenere():
             key = k.read()
             key_size = len(key)
             # key = key * (len(data) // len(key)) + key[:len(data) % len(key)]
+        
         # Decrypt the data
-        if self.bitwise:
-            data = bytearray(data)
-            key = bytearray(key)
-            for i in range(len(data)):
-                # XOR operation
-                if self.xor:
-                    data[i] = (data[i] ^ key[i%key_size])
-                    
-                # Addition operation
-                else:
-                    data[i] = (data[i] - key[i%key_size]) % 256
+        data = bytearray(data)
+        key = bytearray(key)
+        for i in range(len(data)):
+            # XOR operation
+            if self.xor:
+                data[i] = (data[i] ^ key[i%key_size])
+                
+            # Addition operation
+            else:
+                data[i] = (data[i] - key[i%key_size]) % 256
 
-        else:
-            pass
         arq = arq_crypt.split(".")
         nome = "_".join(arq[0].split("_")[:-1]) + "_decifrado" + "." + "txt"
         with open(nome, 'wb') as output_file:
