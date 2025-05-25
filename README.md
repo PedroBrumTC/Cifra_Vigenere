@@ -34,7 +34,7 @@ Este projeto implementa a criptografia e descriptografia de arquivos utilizando 
 - Executar Cifra_vigenere.py
 - passar as informaçoes de acordo com o que for pedido
 
-**saida: **
+**saida:**
 - gera os arquivos criptografado (.bin) e/ou descriptografado (.txt)
 
 ---
@@ -46,4 +46,4 @@ Este projeto implementa a criptografia e descriptografia de arquivos utilizando 
 - passar as informaçoes de acordo com o que for pedido
 
 **saida:**
--um print com a chave com maior possibilidade de ser a utilizada naquele arquivo
+- um print com a chave com maior possibilidade de ser a utilizada naquele arquivo
