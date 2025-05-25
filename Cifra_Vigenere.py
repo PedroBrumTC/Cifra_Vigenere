@@ -91,6 +91,11 @@ class Vigenere():
 
 
 if __name__ == "__main__":
+
+    chave = input("escolha uma chave: ")
+    if chave != "":
+        setKey(chave)
+    
     modo = input("Deseja usar XOR ou ADD para a cifra?").lower()
     if modo in ["xor", "add"]:
         codificador = Vigenere(mode=modo)
