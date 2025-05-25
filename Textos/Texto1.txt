@@ -1,0 +1,18 @@
+Numa cifra de César, cada letra do alfabeto é deslocada da sua posição um número fixo de lugares; por exemplo, se tiver um deslocamento de 3, "A" torna-se "D", "B" fica "E", etc. A cifra de Vigenère consiste no uso de várias cifras de César em sequência, com diferentes valores de deslocamento ditados por uma "palavra-chave".
+
+Para cifrar, é usada uma tabela de alfabetos que consiste no alfabeto escrito 26 vezes em diferentes linhas, cada um deslocado ciclicamente do anterior por uma posição. As 26 linhas correspondem às 26 possíveis cifras de César. Uma palavra é escolhida como "palavra-chave", e cada letra desta palavra vai indicar a linha a ser utilizada para cifrar ou decifrar uma letra da mensagem.
+
+Por exemplo, supondo que se quer criptografar o texto:
+
+ATACARBASESUL ("atacar base Sul")
+Escolhendo a chave e repetindo-a até ter o comprimento do texto a cifrar, por exemplo, se a chave for "LIMAO":
+
+LIMAOLIMAOLIM
+A primeira letra do texto, A, é cifrada usando o alfabeto na linha L, que é a primeira letra da chave. Basta olhar para a letra na linha L e coluna A na grelha de Vigenère, e que é um L. Para a segunda letra do texto, ver a segunda letra da chave: linha I e coluna T , que é B, continuando sempre até obter:
+
+Texto:	ATACARBASESUL
+Chave:	LIMAOLIMAOLIM
+Texto cifrado:	LBMCOCJMSSDCX
+A decriptação é feita inversamente.
+
+A cifra de Vigenère pode ser vista algebricamente. Se as letras A–Z forem mapeadas nos números inteiros 0–25, e a adição módulo 26 for aplicada, a criptografia pode ser escrita:
