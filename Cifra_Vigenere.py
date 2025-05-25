@@ -60,7 +60,7 @@ class Vigenere():
         print(f"# Arquivo {input} cifrado com sucesso e salvo como {output}.")
             
 
-    def decypher(self, input = "cypher.txt", output = "decypher.txt", arq_key = "key.txt"):
+    def decypher(self, input = "cypher.bin", output = "decypher.txt", arq_key = "key.txt"):
         """
         Decrypts a file using the Vigenere cipher.
         :param arquivo: Path to the file to be decrypted.
