@@ -18,12 +18,12 @@ def setmsg(msg: str, arq: str = "input.txt"):
 
 class Vigenere():
 
-    def __init__(self, xor_or_add="add"):
+    def __init__(self, mode="add"):
         """
         Initializes the Vigenere cipher with options for bitwise operations and XOR or addition.
-        :param xor_or_add: If "xor", uses XOR for encryption; if not "xor", uses addition.
+        :param mode: If "xor", uses XOR for encryption; if not "xor", uses addition.
         """
-        self.xor = (xor_or_add == "xor")
+        self.xor = (mode == "xor")
 
     
     def cypher(self, input = "input.txt", output = "cypher.bin", arq_key = "key.txt"):
@@ -95,9 +95,9 @@ class Vigenere():
 if __name__ == "__main__":
     modo = input("Deseja usar XOR ou ADD para a cifra?").lower()
     if modo in ["xor", "add"]:
-        codificador = Vigenere(xor_or_add=modo)
+        codificador = Vigenere(mode=modo)
     else: 
-        codificador = Vigenere(xor_or_add="add")
+        codificador = Vigenere(mode="add")
 
     criptografar = input("Deseja criptografar um arquivo? (y/n)").lower()
     if criptografar == "y":
