@@ -45,8 +45,6 @@ class Vigenere():
         for i in range(len(data)):
             # XOR operation
             if self.xor:
-                c = key[i%key_size]
-                print(c)
                 data[i] = (data[i] ^ key[i%key_size])
                     
             # Addition operation
