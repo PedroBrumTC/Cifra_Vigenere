@@ -1,8 +1,8 @@
 # Projeto: Criptografia e Ataque à Cifra de Vigenère
 
 **autores:**
-Pedro Brum Tristão de Castro
-Mateus Oliveira Santos
+- Pedro Brum Tristão de Castro; 
+- Mateus Oliveira Santos
 
 
 Este projeto implementa a criptografia e descriptografia de arquivos utilizando a Cifra de Vigenère, além de um ataque baseado na análise de frequência de letras.
