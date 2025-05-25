@@ -30,21 +30,20 @@ Este projeto implementa a criptografia e descriptografia de arquivos utilizando 
 
 ### 1. Criptografar e/ou Descriptografar
 
-Colocar os arquivos no mesmo diretório que Cifra_vigenere.py
-Executar Cifra_vigenere.py
-passar as informaçoes de acordo com o que for pedido
+- Colocar os arquivos no mesmo diretório que Cifra_vigenere.py
+- Executar Cifra_vigenere.py
+- passar as informaçoes de acordo com o que for pedido
 
-saida: 
-gera os arquivos criptografado (.bin) e/ou descriptografado (.txt)
+**saida: **
+- gera os arquivos criptografado (.bin) e/ou descriptografado (.txt)
 
 ---
 
 ### 2. Ataque
 
-Colocar os arquivos no mesmo diretório que Ataque.py
-Executar Cifra_vigenere.py
-passar as informaçoes de acordo com o que for pedido
+- Colocar os arquivos no mesmo diretório que Ataque.py
+- Executar Ataque.py
+- passar as informaçoes de acordo com o que for pedido
 
-saida:
-um print com a chave com maior possibilidade de ser a utilizada
-
+**saida:**
+-um print com a chave com maior possibilidade de ser a utilizada naquele arquivo
