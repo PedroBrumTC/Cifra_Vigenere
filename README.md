@@ -24,6 +24,8 @@ Este projeto implementa a criptografia e descriptografia de arquivos utilizando 
 
 - **README.txt**: Este manual de instruções.
 
+- **Relatorio_cifra_vigenere.pdf**: Relatório do projeto
+
 ---
 
 ## Como Executar
